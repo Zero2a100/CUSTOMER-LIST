@@ -1,0 +1,30 @@
+<h2 class="mb-5">Customers</h2>
+
+<div class="text-end">
+    <button class="btn btn-primary" routerLink="/new">
+        New customer
+    </button>
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>City</th>
+            <th>SSN</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(customer of customers;track customer.id){
+            <tr>
+                <td>{{customer.id}}</td>
+                <td>{{customer.firstName}}</td>
+                <td>{{customer.lastName}}</td>
+                <td>{{customer.city}}</td>
+                <td>{{customer.ssn}}</td>
+            </tr>
+        }
+    </tbody>
+</table>
